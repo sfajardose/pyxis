@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}
+    {% endblock %}
+    <meta name="description" content="AppUI is a Web App Bootstrap Admin Template created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+    <link rel="shortcut icon" href="{% static 'recursos/img/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon57.png' %}" sizes="57x57">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon72.png' %}" sizes="72x72">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon76.png' %}" sizes="76x76">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon114.png' %}" sizes="114x114">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon120.png' %}" sizes="120x120">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon144.png' %}" sizes="144x144">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon152.png' %}" sizes="152x152">
+    <link rel="apple-touch-icon" href="{% static 'recursos/img/icon180.png' %}" sizes="180x180">
+
+    <link rel="stylesheet" href="{% static 'recursos/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'recursos/css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'recursos/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'recursos/css/themes.css' %}">
+
+    <script src="{% static 'recursos/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    <script src="{% static 'recursos/js/Chart.js' %}"></script>
+  </head>
+  <body>
+    <div id="page-wrapper" class="page-loading">
+      <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
+        <div id="sidebar">
+          <div id="sidebar-brand" class="themed-background">
+            <a href="index.html" class="sidebar-title">
+              <i class="fa fa-cube"></i> <span class="sidebar-nav-mini-hide">Recursos Humanos</span>
+            </a>
+          </div>
+          <div id="sidebar-scroll">
+            <div class="sidebar-content">
+              <ul class="sidebar-nav">
+                <li>
+                  <a href="index.html" class=" active"><i class="gi gi-compass sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Estadísticas</span></a>
+                </li>
+                <li class="sidebar-separator">
+                  <i class="fa fa-ellipsis-h"></i>
+                </li>
+                <li>
+                  <a href="{% url 'proyecto-personal' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Personal por proyecto</span></a>
+                  <a href="{% url 'proyecto-tipo' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Proyecto por tipo</span></a>
+                  <a href="{% url 'produccion-persona' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Producción por persona</span></a>
+                  <a href="{% url 'produccion-proyecto' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Producción por proyecto</span></a>
+                  <a href="page_app_email.html"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Promedio por proyecto</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="main-container">
+          <header class="navbar navbar-inverse navbar-fixed-top"></header>
+          <div id="page-content">
+            {% block contenido %}
+            {% endblock %}
+          </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
+        <script src="{% static 'recursos/js/vendor/bootstrap.min.js' %}"></script>
+        <script src="{% static 'recursos/js/plugins.js' %}"></script>
+        <script src="{% static 'recursos/js/app.js' %}"></script>
+        <script src="{% static 'recursos/js/pages/readyDashboard.js' %}"></script>
+
+        <script>$(function(){ ReadyDashboard.init(); });</script>
+    </body>
+</html>
