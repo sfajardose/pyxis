@@ -1,1 +1,1 @@
-web: gunicorn recursos_humanos.wsgi --timeout 60
+web: gunicorn recursos_humanos.wsgi --log-file -
