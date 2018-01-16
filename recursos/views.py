@@ -72,7 +72,7 @@ class ProduccionProyecto(LoginRequiredMixin, TemplateView):
     template_name = 'recursos/produccion-proyecto.html'
 
     def get_context_data(self, **kwargs):
-        context = super(ProduccionPersona, self).get_context_data(**kwargs)
+        context = super(ProduccionProyecto, self).get_context_data(**kwargs)
         personas = Usuario.objects.all()
 
         produccion_persona = list()
