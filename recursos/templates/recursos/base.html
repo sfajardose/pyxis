@@ -34,7 +34,7 @@
       <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
         <div id="sidebar">
           <div id="sidebar-brand" class="themed-background">
-            <a href="index.html" class="sidebar-title">
+            <a href="{% url 'proyecto-personal' %}" class="sidebar-title">
               <i class="fa fa-cube"></i> <span class="sidebar-nav-mini-hide">Recursos Humanos</span>
             </a>
           </div>
@@ -42,7 +42,7 @@
             <div class="sidebar-content">
               <ul class="sidebar-nav">
                 <li>
-                  <a href="index.html" class=" active"><i class="gi gi-compass sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Estadísticas</span></a>
+                  <a href="{% url 'proyecto-personal' %}" class=" active"><i class="gi gi-compass sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Estadísticas</span></a>
                 </li>
                 <li class="sidebar-separator">
                   <i class="fa fa-ellipsis-h"></i>
@@ -51,8 +51,6 @@
                   <a href="{% url 'proyecto-personal' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Personal por proyecto</span></a>
                   <a href="{% url 'proyecto-tipo' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Proyecto por tipo</span></a>
                   <a href="{% url 'produccion-persona' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Producción por persona</span></a>
-                  <a href="{% url 'produccion-proyecto' %}"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Producción por proyecto</span></a>
-                  <a href="page_app_email.html"><i class="gi gi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Promedio por proyecto</span></a>
                 </li>
               </ul>
             </div>
